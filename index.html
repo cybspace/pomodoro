@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>clock</title>
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:100,300" rel="stylesheet">
+	<link href="vendors/css/normalize.css" rel="stylesheet">
+	<link href="vendors/css/ion.rangeSlider.css" rel="stylesheet">
+	<link href="vendors/css/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+	<link href="vendors/css/ionicons.css" rel="stylesheet">
+	<link href="resources/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="upper-body">
+		<div class="main">
+			<div class="display">
+				<div class="app-settings">
+					<button title="Settings" class="settings-btn">
+							<i class="ion-gear-a"></i>
+						</button>
+				</div>
+				<div class="timer">
+					<div class="minutes">25</div>
+					<div class="separator">:</div>
+					<div class="seconds">00</div>
+				</div>
+				<div class="timer-count">
+				</div>
+			</div>
+			<div class="controller">
+				<div class="timer-nav">
+					<button title="Start" class="timer-btn start">
+							<i class="ion-play"></i>
+						</button>
+					<button title="Pause" class="timer-btn pause display-none">
+							<i class="ion-pause"></i>
+						</button>
+					<button title="Skip" class="timer-btn skip display-none">
+							<i class="ion-skip-forward"></i>
+						</button>
+					<button title="Stop" class="timer-btn stop">
+							<i class="ion-stop"></i>
+						</button>
+				</div>
+				<div class="activity-io">
+					<textarea class="activity-input" placeholder="What are you doing?"></textarea>
+					<div class="activity-output display-none">What are you doing?</div>
+				</div>
+			</div>
+		</div>
+		<textarea class="text-measurer"></textarea>
+	</div>
+	<div class="lower-body">
+		<div class="title"> 
+			<p>Activity log</p>
+			<div class="current-date">2017-06-22</div>
+		</div>
+		<div class="activity-log">
+			<div class="current-activity"></div>
+			<div class="other-activities"></div>
+
+		</div>
+		<div class="title archive display-none"> 
+			<p>Archive</p>
+			<div class="archive-date">2017-06</div>
+		</div>
+		<div class="archive-log display-none">
+			<div class="archive-activities"></div>
+
+		</div>
+	</div>
+	<div class="settings display-none">
+		<div class="setting-close">
+			<i class="ion-close"></i>
+		</div>
+		<ul>
+			<li class="range-setting">
+				<div class="slider-label">Pomodoro duration</div>
+				<div class="slider-wrapper">
+					<input type="text" id="pomodoro" name="Pomodoro" value="" />
+				</div>
+			</li>
+			<li class="range-setting">
+				<div class="slider-label">Short break duration</div>
+				<div class="slider-wrapper">
+					<input type="text" id="short-break" name="Short break" value="" />
+				</div>
+			</li>
+			<li class="range-setting">
+				<div class="slider-label">Long break duration</div>
+				<div class="slider-wrapper">
+					<input type="text" id="long-break" name="Long break" value="" />
+				</div>
+			</li>
+			<li class="range-setting">
+				<div class="slider-label">Long break delay</div>
+				<div class="slider-wrapper">
+					<input type="text" id="long-break-delay" name="Long break delay" value="" />
+				</div>
+			</li>
+			<li class="range-setting">
+				<div class="checkbox-label">Autostart pomodoro</div>
+				<div class="checkbox-wrapper">
+					<input type="checkbox" class="hidden-cbx" id="autostart-pomodoro" />
+					<label class="cbx" for="autostart-pomodoro"></label>
+				</div>
+			</li>
+			<li class="range-setting">
+				<div class="checkbox-label">Autostart break</div>
+				<div class="checkbox-wrapper">
+					<input type="checkbox" class="hidden-cbx" id="autostart-break" />
+					<label class="cbx" for="autostart-break"></label>
+				</div>
+			</li>
+		</ul>
+		<button title="Confirm" class="setting-confirm">
+				<i class="ion-checkmark"></i>Confirm
+			</button>
+	</div>
+	<div class="warning display-none">
+		<p>This change will reset current timer. <br> Continue?</p>
+		<button title="Cancel" class="warning-cancel">
+				<i class="ion-close"></i>Cancel
+			</button>
+		<button title="Confirm" class="warning-confirm">
+				<i class="ion-checkmark"></i>Confirm
+			</button>
+	</div>
+	<script src="vendors/js/jquery-1.12.3.min.js"></script>
+	<script src="vendors/js/ion.rangeSlider.js"></script>
+	<script src="resources/js/script.js"></script>
+</body>
+
+</html>
