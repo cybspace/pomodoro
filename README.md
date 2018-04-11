@@ -1,1 +1,1 @@
-Pomodoro app
+https://cybspace.github.io/pomodoro/
